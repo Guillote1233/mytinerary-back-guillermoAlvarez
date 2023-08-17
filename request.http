@@ -1,0 +1,8 @@
+POST http://localhost:4000/api/cities
+Content-Type: application/json
+
+{
+  "name": "Tokyo",
+  "country": "Japan",
+  "url": "/tokyo.jpg"
+}
