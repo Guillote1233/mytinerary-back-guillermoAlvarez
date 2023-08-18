@@ -4,7 +4,7 @@ const citiesController = {
   getAllCities: async (req, res, next) => {
     try {
       const cities = await City.find();
-      res.json({
+        res.json({
         success: true,
         cities: cities,
       });
@@ -17,10 +17,13 @@ const citiesController = {
   },
 
   getOneCity: async (req, res, next) => {
-    const { id } = req.params
     try {
-      const city = await City.findById(id);
-      res.status(201).json({success:true});
+      const city = await City.findById(req.params.id);
+      res.json({
+        success:true,
+        message:"city found",
+        city: city
+      });
 
     } catch (err) {
       res.status(500).json({
@@ -32,7 +35,7 @@ const citiesController = {
 
   createOneCity: async (req, res, next) => {
     try {
-      const newCity = new City(req.body);
+      const newCity = City(req.body);
       await newCity.save();
       res.status(201).json({success:true});
 
@@ -45,12 +48,12 @@ const citiesController = {
   updateCity: async (req, res, next) => {
     try {
       const updatedCity = await City.findByIdAndUpdate(req.params.id, req.body, { new: true });
-      if (!updatedCity) {
-        return res.status(404).json({ success: false, error: "City not found" });
-      }
-      res.json({ success: true, city: updatedCity });
+      res.json({ 
+        success: true, 
+        city: updatedCity 
+      });
     } catch (error) {
-      res.status(500).json({
+      res.json({
         success: false,
         error: "Internal server error",
       });
@@ -60,12 +63,12 @@ const citiesController = {
   deleteCity: async (req, res, next) => {
     try {
       const deletedCity = await City.findByIdAndDelete(req.params.id);
-      if (!deletedCity) {
-        return res.status(404).json({ success: false, error: "City not found" });
-      }
-      res.json({ success: true, message: "City deleted!" });
+      res.json({
+        success: true,
+        message: "City deleted",
+        city: deletedCity });
     } catch (error) {
-      res.status(500).json({
+      res.json({
         success: false,
         error: "Internal server error",
       });

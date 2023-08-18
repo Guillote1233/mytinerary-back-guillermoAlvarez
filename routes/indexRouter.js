@@ -5,7 +5,7 @@ const {getAllCities, createOneCity, updateCity, deleteCity, getOneCity } = citie
 const indexRouter = express.Router();
 
 indexRouter.get('/cities', getAllCities );
-indexRouter.get('/cities', getOneCity );
+indexRouter.get('/cities/:id', getOneCity );
 indexRouter.post('/cities', createOneCity );
 indexRouter.put('/cities/:id', updateCity);
 indexRouter.delete('/cities/:id', deleteCity);

@@ -2,7 +2,21 @@ POST http://localhost:4000/api/cities
 Content-Type: application/json
 
 {
-  "name": "Tokyo",
-  "country": "Japan",
-  "url": "/tokyo.jpg"
+  "name": "Moscow",
+  "country": "Russia",
+  "url": "/moscow.jpg",
+  "flag": "RU",
+  "history": "Moscow, the capital of Russia, has a history that dates back over 800 years. It was founded in the 12th century and has served as the political, economic, and cultural center of the country. Moscow played a crucial role in Russian history, from the rise of the Tsardom to the Soviet era. Today, it remains a bustling metropolis with a blend of historic landmarks and modern architecture.",
+  "population": "Approximately 12.5 million",
+  "weather": "Moscow has a continental climate with cold winters and warm summers. Average temperatures range from -10 to -3°C in winter and 17-25°C in summer."
 }
+
+PUT http://localhost:4000/api/cities/64dec35156c6217793abce3a
+Content-Type: application/json
+
+{
+    "country": "UAE"
+}
+
+DELETE http://localhost:4000/api/cities/64de8c3a0baaf84a423a2ea9
+Content-Type: application/json
