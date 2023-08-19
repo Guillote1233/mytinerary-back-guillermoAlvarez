@@ -10,6 +10,4 @@ indexRouter.post('/cities', createOneCity );
 indexRouter.put('/cities/:id', updateCity);
 indexRouter.delete('/cities/:id', deleteCity);
 
-
-
 export default indexRouter;

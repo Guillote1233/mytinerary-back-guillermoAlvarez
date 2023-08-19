@@ -2,20 +2,20 @@ POST http://localhost:4000/api/cities
 Content-Type: application/json
 
 {
-  "name": "Moscow",
-  "country": "Russia",
-  "url": "/moscow.jpg",
-  "flag": "RU",
-  "history": "Moscow, the capital of Russia, has a history that dates back over 800 years. It was founded in the 12th century and has served as the political, economic, and cultural center of the country. Moscow played a crucial role in Russian history, from the rise of the Tsardom to the Soviet era. Today, it remains a bustling metropolis with a blend of historic landmarks and modern architecture.",
-  "population": "Approximately 12.5 million",
-  "weather": "Moscow has a continental climate with cold winters and warm summers. Average temperatures range from -10 to -3°C in winter and 17-25°C in summer."
+  "name": "Lisbon",
+  "country": "Portugal",
+  "url": "/lisbon.jpeg",
+  "flag": "PT",
+  "history": "Lisbon, the capital of Portugal, has a long and storied history that dates back over two millennia. It was settled by Phoenicians, Greeks, and Carthaginians before becoming part of the Roman Empire. Throughout its history, Lisbon has been a center of trade, exploration, and culture. It played a crucial role in the Age of Discovery during the 15th and 16th centuries. Today, it retains its historic charm while embracing modernity.",
+  "population": "Approximately 547,733",
+  "weather": "Lisbon has a Mediterranean climate with mild, rainy winters and warm, dry summers. Average temperatures range from 8-15°C in winter and 18-28°C in summer."
 }
 
-PUT http://localhost:4000/api/cities/64dec35156c6217793abce3a
+PUT http://localhost:4000/api/cities/64dffcbf8916f350ae4e7580
 Content-Type: application/json
 
 {
-    "country": "UAE"
+  "url": "/sydney.jpg"
 }
 
 DELETE http://localhost:4000/api/cities/64de8c3a0baaf84a423a2ea9
