@@ -9,7 +9,7 @@ const citiesController = {
         cities: cities,
       });
     } catch (error) {
-      res.status(500).json({
+      res.json({
         success: false,
         error: "Internal server error",
       });
@@ -26,7 +26,7 @@ const citiesController = {
       });
 
     } catch (err) {
-      res.status(500).json({
+      res.json({
         success: false,
         error: "Internal server error",
       });
@@ -37,10 +37,10 @@ const citiesController = {
     try {
       const newCity = City(req.body);
       await newCity.save();
-      res.status(201).json({success:true});
+      res.json({success:true});
 
     } catch (error) {
-        res.status(500).json({success:false, error: "Internal server error"});
+        res.json({success:false, error: "Internal server error"});
     }
   },
 
