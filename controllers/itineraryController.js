@@ -1,4 +1,4 @@
-import Itinerary from "../models/Itineraries";
+import Itinerary from "../models/Itineraries.js";
 
 const itineraryController = {
   
@@ -27,9 +27,8 @@ const itineraryController = {
   },
 
   getItineraryByCity: async (req, res) => {
-    const { cityId } = req.params;
     try {
-      const itineraries = await Itinerary.find({ CityId: cityId });
+      const itineraries = await Itinerary.find({cityId: req.params.id});
       res.json(itineraries);
     } catch (error) {
       console.error(error);

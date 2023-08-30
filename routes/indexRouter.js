@@ -15,7 +15,7 @@ indexRouter.delete('/cities/:id', deleteCity);
 
 indexRouter.get('/city-itineraries', getAllItinerary)
 indexRouter.get('/city-itineraries/:id', getOneItinerary);
-indexRouter.get('/city-itineraries/:cityId', getItineraryByCity);
+indexRouter.get('/city-itineraries/byCity/:id', getItineraryByCity);
 indexRouter.post('/city-itineraries', createItinerary);
 indexRouter.put('/city-itineraries/:id', updateItinerary);
 indexRouter.delete('/city-itineraries/:id', deleteItinerary);
