@@ -18,7 +18,7 @@ Content-Type: application/json
   "url": "/sydney.jpg"
 }
 
-DELETE http://localhost:4000/api/cities/64de8c3a0baaf84a423a2ea9
+DELETE http://localhost:4000/api/city-itineraries/64efdb514b73b9a1b4b3bea1
 Content-Type: application/json
 
 
@@ -26,21 +26,22 @@ POST http://localhost:4000/api/city-itineraries
 Content-Type: application/json
 
 {
-  "cityId": "64debf2e56c6217793abce35",
-  "itineraryName": "Sumo Tournament",
-  "price":"3",
-  "duration":"6 hours",
-  "urlImage": "/itTokyo2.webp",
+  "cityId": "64dec82e56c6217793abce59",
+  "itineraryName": "Beer's Factory Tour",
+  "price":"4",
+  "duration":"4 hour",
+  "urlImage": "/itMDQ2.jpg",
   "profilePicture":"https://source.unsplash.com/80x80?face",
-  "profileName":"Ariel Ito",
-  "likes":"0"
+  "profileName":"G.Alvarez",
+  "likes":"0",
+  "hashtags":["#MDQBeer", "#AntaresBeer", "#AtlanticPearl"]
 }
 
-PUT http://localhost:4000/api/city-itineraries/64ef3c18dcfbc4cbc7b7bc48
+PUT http://localhost:4000/api/city-itineraries/64efe33f4b73b9a1b4b3beb8
 Content-Type: application/json
 
 {
 
-  "hashtags":"#SumoMatches"
+  "urlImage": "/itPuntaCana2.jpg"
 
 }

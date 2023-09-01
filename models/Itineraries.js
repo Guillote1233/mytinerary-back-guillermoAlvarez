@@ -9,7 +9,7 @@ const itinerarySchema = Schema({
     profilePicture:{type:String, required:true},
     profileName:{type:String, required:true},
     likes:{type:Number, required:true},
-    hashtags:{type:String},
+    hashtags:[{type:String}],
     comment: {type:String}
 },{
     timestamps: true
