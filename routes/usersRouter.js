@@ -1,9 +1,9 @@
-import express from 'express';
-const usersRouter = express.Router();
+import {Router} from 'express';
+import userController from '../controllers/userController.js'
 
-/* GET users listing. */
-usersRouter.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const usersRouter = Router();
+const { signUp } = userController;
+
+usersRouter.post('/', signUp);
 
 export default usersRouter;

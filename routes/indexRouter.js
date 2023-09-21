@@ -1,6 +1,7 @@
 import express from 'express';
 import citiesController from '../controllers/citiesController.js'
 import itineraryController from '../controllers/itineraryController.js';
+import usersRouter from '../routes/usersRouter.js'
 
 const { getAllCities, createOneCity, updateCity, deleteCity, getOneCity } = citiesController;
 const { getAllItinerary, getItineraryByCity, getOneItinerary, createItinerary, updateItinerary, deleteItinerary } = itineraryController;
@@ -19,5 +20,7 @@ indexRouter.get('/city-itineraries/byCity/:id', getItineraryByCity);
 indexRouter.post('/city-itineraries', createItinerary);
 indexRouter.put('/city-itineraries/:id', updateItinerary);
 indexRouter.delete('/city-itineraries/:id', deleteItinerary);
+
+indexRouter.use('/auth', usersRouter);
 
 export default indexRouter;
