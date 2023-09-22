@@ -45,3 +45,14 @@ Content-Type: application/json
   "urlImage": "/itPuntaCana2.jpg"
 
 }
+
+POST http://localhost:4000/api/auth
+Content-Type: application/json
+
+{
+  "name": "Guille",
+  "surname": "Alvarez",
+  "email": "testguille@yopmail.com",
+  "password": "Test1234@",
+  "country": "Argentina"
+}
